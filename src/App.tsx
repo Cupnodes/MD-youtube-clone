@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core';
+import Home from './components/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  render() {    
+
+    const theme = createMuiTheme({
+      palette: {
+        primary: { 
+          main: '#f44336'
+        },
+        secondary: {
+          main: '#3f51b5'
+        }
+      },
+      spacing: 4
+    });
+
+    return (
+      <div>
+        <ThemeProvider theme={theme}>
+          <Home />
+        </ThemeProvider>
+      </div>
+    )
+  }
+
 }
 
 export default App;
