@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, AppBar, Toolbar, IconButton, Button, List, ListItem, Drawer, ListItemText, Divider, ListItemIcon, Typography, Box, Grid } from '@material-ui/core';
+import { makeStyles, AppBar, Toolbar, IconButton, Button, List, ListItem, Drawer, ListItemText, Divider, ListItemIcon, Typography, Box, Grid, Hidden } from '@material-ui/core';
 import Preto from "../assets/images/preto.png";
 import Thumb1 from '../assets/images/thumb1.png';
 import Thumb2 from '../assets/images/thumb2.png';
@@ -193,109 +193,111 @@ const Home = () => {
         </Toolbar>
       </AppBar>
       <Box display='flex'>
-        <Drawer
-          className={classes.drawer}
-          variant="permanent"
-          classes={{
-            paper: classes.drawerPaper,
-          }}
-        >
-          <Toolbar />
-          <div className={classes.drawerContainer}>
-            <List component="nav" aria-label="main mailbox folders">
-              <ListItem button>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="Home" />
-              </ListItem>
+        <Hidden smDown>
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <Toolbar />
+            <div className={classes.drawerContainer}>
+              <List component="nav" aria-label="main mailbox folders">
+                <ListItem button>
+                  <ListItemIcon>
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Home" />
+                </ListItem>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <Whatshot />
-                </ListItemIcon>
-                <ListItemText primary="Trending" />
-              </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Whatshot />
+                  </ListItemIcon>
+                  <ListItemText primary="Trending" />
+                </ListItem>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <Subscriptions />
-                </ListItemIcon>
-                <ListItemText primary="Subscriptions" />
-              </ListItem>
-            </List>
-            <Divider classes={{
-              root: classes.divider
-            }} />
-            <List component="nav" aria-label="secondary mailbox folders">
-              <ListItem button>
-                <ListItemIcon>
-                  <VideoLibrary />
-                </ListItemIcon>
-                <ListItemText primary="Library" />
-              </ListItem>
-
-              <ListItem button>
-                <ListItemIcon>
-                  <History />
-                </ListItemIcon>
-                <ListItemText primary="History" />
-              </ListItem>
-
-              <ListItem button>
-                <ListItemIcon>
-                  <WatchLater />
-                </ListItemIcon>
-                <ListItemText primary="Watch Later" />
-              </ListItem>
-
+                <ListItem button>
+                  <ListItemIcon>
+                    <Subscriptions />
+                  </ListItemIcon>
+                  <ListItemText primary="Subscriptions" />
+                </ListItem>
+              </List>
               <Divider classes={{
                 root: classes.divider
               }} />
-              <Typography gutterBottom variant="subtitle1" classes={{
-                subtitle1: classes.title
-              }}>
-                More from Youtube
+              <List component="nav" aria-label="secondary mailbox folders">
+                <ListItem button>
+                  <ListItemIcon>
+                    <VideoLibrary />
+                  </ListItemIcon>
+                  <ListItemText primary="Library" />
+                </ListItem>
+
+                <ListItem button>
+                  <ListItemIcon>
+                    <History />
+                  </ListItemIcon>
+                  <ListItemText primary="History" />
+                </ListItem>
+
+                <ListItem button>
+                  <ListItemIcon>
+                    <WatchLater />
+                  </ListItemIcon>
+                  <ListItemText primary="Watch Later" />
+                </ListItem>
+
+                <Divider classes={{
+                  root: classes.divider
+                }} />
+                <Typography gutterBottom variant="subtitle1" classes={{
+                  subtitle1: classes.title
+                }}>
+                  More from Youtube
             </Typography>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <YouTube />
-                </ListItemIcon>
-                <ListItemText primary="YouTube Premium" />
-              </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <YouTube />
+                  </ListItemIcon>
+                  <ListItemText primary="YouTube Premium" />
+                </ListItem>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <Theaters />
-                </ListItemIcon>
-                <ListItemText primary="Movies" />
-              </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Theaters />
+                  </ListItemIcon>
+                  <ListItemText primary="Movies" />
+                </ListItem>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <Games />
-                </ListItemIcon>
-                <ListItemText primary="Gaming" />
-              </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Games />
+                  </ListItemIcon>
+                  <ListItemText primary="Gaming" />
+                </ListItem>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <LiveTv />
-                </ListItemIcon>
-                <ListItemText primary="Live" />
-              </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <LiveTv />
+                  </ListItemIcon>
+                  <ListItemText primary="Live" />
+                </ListItem>
 
-              <ListItem button>
-                <ListItemIcon>
-                  <WbIncandescentIcon />
-                </ListItemIcon>
-                <ListItemText primary="Learning" />
-              </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <WbIncandescentIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Learning" />
+                </ListItem>
 
-            </List>
-          </div>
-        </Drawer>
+              </List>
+            </div>
+          </Drawer>
+        </Hidden>
 
         <Box p={8}>
           <Toolbar />
